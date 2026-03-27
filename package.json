@@ -1,0 +1,70 @@
+{
+  "name": "@entrolytics/utilities",
+  "version": "2.2.0",
+  "description": "Common utilities and helper functions for Entrolytics",
+  "keywords": [
+    "entrolytics",
+    "helpers",
+    "utilities",
+    "utils"
+  ],
+  "homepage": "https://entrolytics.click",
+  "bugs": {
+    "url": "https://github.com/entrolytics/utilities/issues"
+  },
+  "license": "MIT",
+  "author": "Entrolytics <hey@entrolytics.click>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/entrolytics/utilities",
+    "directory": "packages/utilities/entrolytics-utilities"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vp pack --watch",
+    "build": "vp pack",
+    "check": "vp check",
+    "lint": "vp lint --fix . && vp fmt --write .",
+    "lint:check": "vp lint . && vp fmt --check .",
+    "lint:fix-unsafe": "vp lint -f stylish --import-plugin --type-aware --type-check --vitest-plugin --fix --fix-suggestions --fix-dangerously src/",
+    "format": "vp fmt --write .",
+    "test": "vp test run",
+    "test:watch": "vp test",
+    "prepublishOnly": "vp run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^6.0.2",
+    "vite-plus": "latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@^0.1.14"
+  },
+  "engines": {
+    "node": ">=24.x"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+    }
+  }
+}
