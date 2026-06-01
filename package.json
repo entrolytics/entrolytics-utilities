@@ -54,13 +54,12 @@
   "devDependencies": {
     "@types/node": "^25.9.1",
     "typescript": "^6.0.3",
-    "vite": "^8.0.14",
+    "vite": "^8.0.15",
     "vite-plus": "^0.1.23",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.8"
   },
   "engines": {
     "node": ">=24.x"
   },
   "packageManager": "pnpm@11.5.0"
-
 }
