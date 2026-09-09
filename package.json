@@ -40,22 +40,24 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "vp pack --watch",
-    "build": "vp pack",
-    "check": "vp check",
-    "lint": "vp lint --fix . && vp fmt --write .",
-    "lint:check": "vp lint . && vp fmt --check .",
-    "lint:fix-unsafe": "vp lint -f stylish --import-plugin --type-aware --type-check --vitest-plugin --fix --fix-suggestions --fix-dangerously src/",
-    "format": "vp fmt --write .",
-    "test": "vp test run",
-    "test:watch": "vp test",
-    "prepublishOnly": "vp run build"
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "check": "tsc --noEmit",
+    "lint": "oxlint --fix . && oxfmt --write .",
+    "lint:check": "oxlint . && oxfmt --check .",
+    "lint:fix-unsafe": "oxlint -f stylish --import-plugin --type-aware --type-check --vitest-plugin --fix --fix-suggestions --fix-dangerously src/",
+    "format": "oxfmt --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@types/node": "^26.5.0",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
+    "tsdown": "^0.23.0",
     "typescript": "next",
-    "vite": "catalog:",
-    "vite-plus": "catalog:"
+    "vitest": "^5.0.0"
   },
   "engines": {
     "node": ">=24.20.0"
