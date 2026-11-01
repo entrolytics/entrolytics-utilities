@@ -8,12 +8,12 @@
     "utilities",
     "utils"
   ],
-  "homepage": "https://entrolytics.click",
+  "homepage": "https://entrolytics.dev",
   "bugs": {
     "url": "https://github.com/entrolytics/utilities/issues"
   },
   "license": "MIT",
-  "author": "Entrolytics <hey@entrolytics.click>",
+  "author": "Entrolytics <hey@entrolytics.dev>",
   "repository": {
     "type": "git",
     "url": "https://github.com/entrolytics/utilities",
@@ -52,15 +52,15 @@
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
-    "@types/node": "^26.5.0",
-    "oxfmt": "^0.67.0",
-    "oxlint": "^1.82.0",
-    "tsdown": "^0.23.0",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "tsdown": "^0.23.4",
     "typescript": "next",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.5"
   },
   "engines": {
-    "node": ">=24.20.0"
+    "node": ">=24.22.1"
   },
-  "packageManager": "pnpm@11.26.0"
+  "packageManager": "pnpm@11.28.10"
 }
